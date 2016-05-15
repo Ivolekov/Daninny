@@ -1,0 +1,77 @@
+'use strict';
+
+angular.module('daninnyApp.littleBasket', ['ngRoute'])
+
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/littleBasket', {
+            templateUrl: 'app/weddingGifts/littleBasket/littleBasket.html',
+            controller: 'LittleBasket'
+        });
+    }])
+
+    .controller('LittleBasket', ['$scope', function ($scope) {
+
+        $scope.littleBasketGallery = [
+            {
+                photo: 'app/components/img/wedding/littleBasket/aida.jpg',
+                category: 'Кошничка',
+                itemName: '"Брилянт"'
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/bialaPrikazkaBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/buketBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/dantelaBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/feeria.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/galateaBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/goldBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/iglikaBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/maraiaBаsket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/proletBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/purpleBasket.jpg',
+                category: '',
+                itemName: ''
+            },
+            {
+                photo: 'app/components/img/wedding/littleBasket/satenBasket.jpg',
+                category: '',
+                itemName: ''
+            }
+        ]
+
+    }]);

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="daninnyApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="daninnyApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="daninnyApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="daninnyApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Daninny</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/main.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="app/components/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="app/components/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel='stylesheet' href='app/bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all'/>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="app/components/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app/components/creative.css" type="text/css">
+
+
+    <link rel="stylesheet" href="app/app.css">
+    <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="app/bower_components/angular/angular.js"></script>
+</head>
+<body>
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Daninny Art Gallery</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="#artGifts">Арт подаръци</a>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">Сватбени подаръци за гости<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#littleBottle">Малки бутилки</a></li>
+                        <li><a href="#candyBox">Кутийки с бонбони</a></li>
+                        <li><a href="#littleBasket">Малки кошнички</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#baptismGifts">Подаръци за кръщене</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#order">Условия за поръчка</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Контакти</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="loading-bar-container"></div>
+<div ng-view ng-cloak="" style="margin-top: 50px"></div>
+<footer id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <hr class="primary">
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
+
+                <p>0889/ 234 924</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fa fa-facebook fa-3x wow bounceIn" aria-hidden="true"></i>
+
+                <p><a target="_blank"
+                      href="https://www.facebook.com/%D0%A1%D0%B2%D0%B0%D1%82%D0%B1%D0%B5%D0%BD%D0%B8-%D0%B0%D0%BA%D1%81%D0%B5%D1%81%D0%BE%D0%B0%D1%80%D0%B8-Daninny-346273882097774/">Сватбени
+                    аксесоари "Daninny"</a></p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+
+                <p><a href="mailto:daninny_art@abv.bg">daninny_art@abv.bg</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+
+<script src="app/bower_components/angular-route/angular-route.js"></script>
+<script src="app/bower_components/angular-animate/angular-animate.js"></script>
+<script type='text/javascript' src='app/bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+<script src="app/app.js"></script>
+<script src="app/weddingGifts/weddingGifts.js"></script>
+<script src="app/weddingGifts/littleBottles/littleBottles.js"></script>
+<script src="app/weddingGifts/candyBox/candyBox.js"></script>
+<script src="app/weddingGifts/littleBasket/littleBasket.js"></script>
+<script src="app/baptismGifts/baptismGifts.js"></script>
+<script src="app/artGifts/artGifts.js"></script>
+<script src="app/order/order.js"></script>
+<script src="app/contacts/contacts.js"></script>
+<script src="app/components/version/version.js"></script>
+<script src="app/components/version/version-directive.js"></script>
+<script src="app/components/version/interpolate-filter.js"></script>
+
+<!-- jQuery -->
+<script src="app/components/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="app/components/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="app/components/js/jquery.easing.min.js"></script>
+<script src="app/components/js/jquery.fittext.js"></script>
+<script src="app/components/js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="app/components/js/creative.js"></script>
+</body>
+</html>

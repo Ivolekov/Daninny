@@ -3,7 +3,6 @@
 // Declare app level module which depends on views, and components
 angular.module('daninnyApp', [
     'ngRoute',
-    'angular-loading-bar',
     'ngAnimate',
     'daninnyApp.weddingGifts',
     'daninnyApp.littleBottles',
@@ -12,8 +11,13 @@ angular.module('daninnyApp', [
     'daninnyApp.baptismGifts',
     'daninnyApp.artGifts',
     'daninnyApp.order',
-    'daninnyApp.contacts'
+    'daninnyApp.contacts',
+    'ngAria',
+    'ngMaterial',
+    'ui.bootstrap'
 ]).
 config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.otherwise({redirectTo: '/weddingGifts'});
+    $routeProvider.otherwise({redirectTo: '/littleBasket'});
+
+
 }]);

@@ -1,21 +1,29 @@
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
-        <div class="rowGallery no-gutter" ng-repeat="item in littleBasketGallery">
+        <div class="rowGallery no-gutter" ng-repeat="item in filteredlittleBaskets" ng-show="item.visible">
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src={{item.photo}} class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                {{item.category}}
+                <div id="dialogContainer" ng-controller="LittleBasket as ctrl" layout="row" ng-cloak>
+                    <md-content >
+                        <md-button class="md-primary md-raised" ng-click="showCustom($event)">
+                            <div class="portfolio-box">
+                                <img ng-src={{item.photo}} class="img-responsive" alt="Little Basket" show-on-load >
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            {{item.itemName}}
+                                        </div>
+                                        <div class="project-name">
+                                            {{item.category}}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-name">
-                                {{item.itemName}}
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                        </md-button>
+                    </md-content>
+                </div>
             </div>
         </div>
     </div>
+    <pager total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage"
+           ng-change="pageChanged()"></pager>
 </section>

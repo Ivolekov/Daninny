@@ -9,12 +9,12 @@ angular.module('daninnyApp.artGifts', ['ngRoute'])
         });
     }])
 
-    .controller('ArtGiftsCtrl', ['$scope', function ($scope) {
+    .controller('ArtGiftsCtrl', ['$scope', '$mdDialog', function ($scope, $mdDialog) {
         $scope.artGallery = [
             {
                 photo:'app/components/img/artGiftGallery/artFlower11.jpg',
-                category:'',
-                itemName:''
+                category:'jh',
+                itemName:'lkhfx'
             },
             {
                 photo:'app/components/img/artGiftGallery/artFlower.jpg',
@@ -57,4 +57,63 @@ angular.module('daninnyApp.artGifts', ['ngRoute'])
                 itemName:''
             }
         ]
-    }]);
+
+        $scope.totalItems = $scope.artGallery.length;
+        $scope.itemsPerPage = 6,
+            $scope.currentPage = 1;
+
+        // $scope.setPage = function (pageNo) {
+        //     $scope.currentPage = pageNo;
+        // };
+        //
+        // $scope.pageChanged = function() {
+        //     console.log('Page changed to: ' + $scope.currentPage);
+        // };
+
+        $scope.maxSize = 5;
+        $scope.bigTotalItems = 175;
+        $scope.bigCurrentPage = 1;
+
+        $scope.pageCount = function () {
+            return Math.ceil($scope.artGallery.length / $scope.itemsPerPage);
+        };
+
+        $scope.$watch('currentPage + itemsPerPage', function() {
+            var begin = (($scope.currentPage - 1) * $scope.itemsPerPage),
+                end = begin + $scope.itemsPerPage;
+
+            $scope.filteredArtGallery = $scope.artGallery.slice(begin, end);
+        });
+
+        $scope.showCustom = function (event) {
+            $mdDialog.show({
+                clickOutsideToClose: true,
+                scope: $scope,
+                preserveScope: true,
+                template: '<md-dialog class="custom-dialog">' +
+                '  <md-dialog-content>' +
+                '<img class="custom-dialog-image" src={{item.photo}} class="img-responsive" alt="">' +
+                '<div class="project-name">{{item.itemName}}</div>' +
+                '<p class="custom-dialog-description">{{item.description}}</p>' +
+                '<div class="custom-dialog-itemPrice">{{item.price}}</div>' +
+                '  </md-dialog-content>' +
+                '</md-dialog>',
+                controller: function DialogController($scope, $mdDialog) {
+                    $scope.closeDialog = function () {
+                        $mdDialog.hide();
+                    }
+                }
+            });
+        };
+    }])
+    .directive("showOnLoad", function () {
+        return {
+            link: function (scope, element) {
+                element.on("load", function () {
+                    scope.$apply(function () {
+                        scope.item.visible = true;
+                    });
+                });
+            }
+        };
+    });

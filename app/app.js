@@ -4,7 +4,6 @@
 angular.module('daninnyApp', [
     'ngRoute',
     'ngAnimate',
-    'daninnyApp.weddingGifts',
     'daninnyApp.littleBottles',
     'daninnyApp.candyBox',
     'daninnyApp.littleBasket',
@@ -15,9 +14,9 @@ angular.module('daninnyApp', [
     'ngAria',
     'ngMaterial',
     'ui.bootstrap'
-]).
-config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.otherwise({redirectTo: '/littleBasket'});
+])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.otherwise({redirectTo: '/littleBasket'});
 
 
-}]);
+    }]);

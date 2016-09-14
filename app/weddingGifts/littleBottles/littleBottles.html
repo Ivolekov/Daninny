@@ -3,18 +3,16 @@
         <div class="rowGallery no-gutter" ng-repeat="item in littleBottleGallery" ng-show="item.visible">
             <div class="col-lg-4 col-sm-6">
                 <div id="dialogContainer" ng-controller="LittleBottlesCtrl as ctrl" layout="row" ng-cloak>
-                    <md-content>
+                    <md-content class="portfolio-box">
                         <md-button class="md-primary md-raised" ng-click="showCustom($event)">
-                            <div class="portfolio-box">
-                                <img ng-src={{item.photo}} class="img-responsive" alt="Little Bottle" show-on-load>
-                                <div class="portfolio-box-caption">
-                                    <div class="portfolio-box-caption-content">
-                                        <div class="project-category text-faded">
-                                            {{item.itemName}}
-                                        </div>
-                                        <div class="project-name">
-                                            {{item.category}}
-                                        </div>
+                            <img ng-src={{item.photo}} class="img-responsive" alt="Little Bottle" show-on-load>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        {{item.itemName}}
+                                    </div>
+                                    <div class="project-name">
+                                        {{item.category}}
                                     </div>
                                 </div>
                             </div>

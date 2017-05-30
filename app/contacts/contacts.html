@@ -1,43 +1,73 @@
-<!--<section id="contact">-->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-lg-8 col-lg-offset-2 text-center">-->
-                <!--<h2 class="section-heading">Свържете се с нас</h2>-->
-                <!--<hr class="primary">-->
-                <!--<p>За повече информация относно подаръците за гости за сватба и кръщене, моля свържете се с нас!</p>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 col-lg-offset-2 text-center">-->
-                <!--<i class="fa fa-phone fa-3x wow bounceIn"></i>-->
-                <!--<p>0889/ 234 924</p>-->
-            <!--</div>-->
-            <!--<div class="col-lg-4 text-center">-->
-                <!--<i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>-->
-                <!--<p><a href="mailto:daninny_art@abv.bg">daninny_art@abv.bg</a></p>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
-<div class="container-contact">
-    <form id="contact" action="" method="post">
-        <h3>Свържете се с нас!</h3>
-        <h4>Всички полета са задължителни</h4>
-        <fieldset>
-            <input placeholder="Име и Фамилия" type="text" tabindex="1" required autofocus title="Напишете вашето име и фамиля">
-        </fieldset>
-        <fieldset>
-            <input placeholder="Email" type="email" tabindex="2" required title="Напишете ваш валиден email адрес">
-        </fieldset>
-        <fieldset>
-            <input placeholder="Телефон за връзка" type="tel" tabindex="3" required title="Напишете ваш актуален телефонен номер">
-        </fieldset>
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Свържете се с нас</h2>
+                <hr class="primary">
+                <p>За повече информация относно подаръците за гости за сватба и кръщене, моля свържете се с нас!</p>
+            </div>
+            <div class="col-lg-4 col-lg-offset-2 text-center">
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                <p>0889/ 234 924</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p><a href="mailto:daninny_art@abv.bg">daninny_art@abv.bg</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<div class="container-contact">-->
+    <!--<form id="contact">-->
+        <!--<h3>Свържете се с нас!</h3>-->
+        <!--<h4>Всички полета са задължителни</h4>-->
         <!--<fieldset>-->
-            <!--<input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>-->
+            <!--<input placeholder="Име" type="text" tabindex="1" required-->
+                   <!--autofocus title="Напишете Вашето Име">-->
         <!--</fieldset>-->
-        <fieldset>
-            <textarea placeholder="Напишете вашето съобщение тук...." tabindex="5" required></textarea>
-        </fieldset>
-        <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Изпрати</button>
-        </fieldset>
-    </form>
-</div>
+        <!--<fieldset>-->
+            <!--<input placeholder="Email" type="email" tabindex="2" required title="Напишете ваш валиден email адрес">-->
+        <!--</fieldset>-->
+        <!--<fieldset>-->
+            <!--<input placeholder="Телефон за връзка" type="tel" tabindex="3" required title="Напишете ваш актуален телефонен номер">-->
+        <!--</fieldset>-->
+        <!--&lt;!&ndash;<fieldset>&ndash;&gt;-->
+            <!--&lt;!&ndash;<input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>&ndash;&gt;-->
+        <!--&lt;!&ndash;</fieldset>&ndash;&gt;-->
+        <!--<fieldset>-->
+            <!--<textarea placeholder="Напишете вашето съобщение тук...." tabindex="5" required></textarea>-->
+        <!--</fieldset>-->
+        <!--<fieldset>-->
+            <!--<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Изпрати</button>-->
+        <!--</fieldset>-->
+    <!--</form>-->
+<!--</div>-->
+
+<!--<div data-ng-controller="ContactsCtrl as cf" flex layout="row" layout-align="center center">-->
+    <!--<div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">-->
+        <!--<md-content class="md-padding">-->
+            <!--<div flex-sm="100" flex-gt-sm="80" layout-sm="column">-->
+                <!--<form name="contactForm" data-ng-submit="cf.sendMail()">-->
+                    <!--<md-input-container>-->
+                        <!--<label>Name:</label>-->
+                        <!--<input ng-model="cf.contactName" required>-->
+                    <!--</md-input-container>-->
+                    <!--<md-input-container flex>-->
+                        <!--<label>Email:</label>-->
+                        <!--<input type="email" ng-model="cf.contactEmail" required>-->
+                    <!--</md-input-container>-->
+
+                    <!--<md-input-container>-->
+                        <!--<label>Message:</label>-->
+                        <!--<textarea ng-model="cf.contactMsg" columns="1" md-maxlength="150" required></textarea>-->
+                    <!--</md-input-container>-->
+
+                    <!--<md-button type="submit" class="md-primary"-->
+                               <!--ng-class="{'md-raised md-hue-1': (contactForm.$dirty && contactForm.$valid) }"-->
+                               <!--aria-label="Save Project">Send</md-button>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</md-content>-->
+    <!--</div>-->
+<!--</div>-->

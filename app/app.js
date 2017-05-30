@@ -13,7 +13,8 @@ angular.module('daninnyApp', [
     'daninnyApp.contacts',
     'ngAria',
     'ngMaterial',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    // 'ui.router'
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/littleBasket'});

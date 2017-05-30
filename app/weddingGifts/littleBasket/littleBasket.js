@@ -138,9 +138,11 @@ angular.module('daninnyApp.littleBasket', ['ngRoute', 'ngMaterial', 'ui.bootstra
                 template: '<md-dialog class="custom-dialog">' +
                 '  <md-dialog-content>' +
                 '<img class="custom-dialog-image" src={{item.photo}} class="img-responsive" alt="">' +
+                '<div class="custon-dialog-description">' +
                 '<div class="project-name">{{item.itemName}}</div>' +
                 '<p class="custom-dialog-description">{{item.description}}</p>' +
                 '<div class="custom-dialog-itemPrice">{{item.price}}</div>' +
+                '</div>' +
                 '  </md-dialog-content>' +
                 '</md-dialog>',
                 controller: function DialogController($scope, $mdDialog) {
